@@ -41,7 +41,7 @@ if [[ "$ask" == [Y/y] ]];then
 decoration
 fi
 addrepo
-echo "[i] TermuxBlack Installed Successfully."
+echo "[i] TermuxBlack Installed Successfully. :) "
 # Now trigger broadcast to make changes visible
 echo "[i] Now Open New Session & Enjoy (:"
 exit 0
@@ -49,7 +49,7 @@ exit 0
 # Backup to default settings of your termux. Or Uninstall
 elif [[ ${1} == "--uninstall" || ${1} == "-u" ]];then
 if [ ! -f "$PREFIX/etc/apt/sources.list.d/termuxblack.list" ];then
-echo "[i] TermuxBlack Repository couldn't found !, Make Install First."
+echo "[i] TermuxBlack Repository couldn't found !, Make Install First. :-:"
 exit 0
 fi
 	rm $PREFIX/etc/apt/sources.list.d/termuxblack.list
@@ -64,7 +64,7 @@ if [[ -f "$HOME/.termux/configure.bk" ]];then
 	rm $HOME/.termux/configure.bk
 	am broadcast --user 0 -a com.termux.app.reload_style com.termux > /dev/null
 fi
-	echo "[i] TermuxBlack Uninstalled Successfully."
+	echo "[i] TermuxBlack Uninstalled Successfully. :("
 	exit 0
 fi
 
